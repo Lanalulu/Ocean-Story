@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/message.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<title>An Ocean Story</title>
+</head>
+<body>
+<div class="Chapter1">
+<div id="blur">
+	<div id="day">
+		<div id="clouds"><img src="images/clouds.png"/></div>
+	</div>
+	<div id="night">
+		<div id="stars" class="stars"></div>
+		<div id="stars2" class="stars"></div>
+		<div id="stars3" class="stars"></div>
+		<div id="stars4" class="stars"></div>
+		<div id="stars5" class="stars"></div>
+		<div id="stars6" class="stars"></div>
+		<div id="stars7" class="stars"></div>
+		<div id="stars8" class="stars"></div>
+		<div id="stars9" class="stars"></div>
+		<div id="stars10" class="stars"></div>
+	</div>
+
+	<div id="night_purple">
+			<div id="stars" class="stars"></div>
+			<div id="stars2" class="stars"></div>
+			<div id="stars3" class="stars"></div>
+			<div id="stars4" class="stars"></div>
+			<div id="stars5" class="stars"></div>
+			<div id="stars6" class="stars"></div>
+			<div id="stars7" class="stars"></div>
+			<div id="stars8" class="stars"></div>
+			<div id="stars9" class="stars"></div>
+			<div id="stars10" class="stars"></div>
+	</div>
+
+	<div id="night_blue">
+			<div id="stars" class="stars"></div>
+			<div id="stars2" class="stars"></div>
+			<div id="stars3" class="stars"></div>
+			<div id="stars4" class="stars"></div>
+			<div id="stars5" class="stars"></div>
+			<div id="stars6" class="stars"></div>
+			<div id="stars7" class="stars"></div>
+			<div id="stars8" class="stars"></div>
+			<div id="stars9" class="stars"></div>
+			<div id="stars10" class="stars"></div>
+	</div>
+	
+	<div id="dolphin"><img src="images/dolphin.png" width="200"/>
+		<div id="boy"><img src="images/boy.png" width="80"/></div>
+	</div>
+
+
+	<div id="moon"></div>
+	<div id="sun"></div>
+	<div id="ocean_night">
+		<div id="reflection"></div>
+	</div>
+	<div id="ocean_day">
+		<div id="splash"><img src="images/splash.gif"/></div>
+		<div class="bubbles">
+			<div id="bubble"></div>
+			<div id="bubble2"></div>
+			<div id="bubble3"></div>
+			<div id="bubble4"></div>
+			<div id="bubble5"></div>
+			<div id="bubble6"></div>
+			<div id="bubble7"></div>
+			<div id="bubble8"></div>
+		</div>
+	</div>
+
+	<div id="ocean_dawn"></div>
+	<div id="shore_night"></div>
+	<div id="shore_day"></div>
+</div>
+
+<div id="rose" onmousedown="chimes.play()"><img src="images/rose.png" width="30"/></div>
+<div id="sparkle"><img src="http://dl.glitter-graphics.net/pub/462/462141ti1oa2y482.gif" width=64 height=64 border=0/></div>
+<div id="shell"><img src="images/shell.png" width="30"/></div>
+<div id="shell2"><img src="images/shell2.png" width="20"/></div>
+<div id="oyster"><img src="images/oyster.png" width="30"/></div>
+
+<div class="birds">
+	<div id="wing"></div>
+	<div id="wing2"></div>
+</div>
+</div>
+
+<div class="Chapter2">
+	<div id="waves"><img src="images/wavez.png" class="waves"/></div>
+	<div id="waves2"><img src="images/wavez.png" class="waves"/></div>
+		<div id="eighth_notes">
+			<div class="circle"></div>
+			<div class="square"></div>
+			<div class="circle2"></div>
+			<div class="square2"></div>
+			<div class="circle3"></div>
+			<div class="square3"></div>
+			<div class="circle4"></div>
+			<div class="square4"></div>
+		</div>
+	<div class="single_eighth">&#9834;
+		<div class="circle5"></div>
+	</div>
+	<div class="quarter_note">&#9833;
+		<div class="circle6"></div>
+	</div>
+	<div class="single_eighth2">&#9834;
+		<div class="circle7"></div>
+	</div>
+	<div class="rest"><img src="images/rest.png"/></div>
+	<div class="single_eighth3">&#9834;
+		<div class="circle8"></div>
+	</div>
+	<div class="single_eighth4">&#9834;
+		<div class="circle9"></div>
+	</div>
+	<div class="rest2"><img src="images/rest.png"/></div>
+	<div class="quarter_note2">&#9833;
+		<div class="circle10"></div>
+	</div>
+	<div class="flat">&#9837;</div>
+	<div class="flat2">&#9837;</div>
+	<hr style="width: 50px;">
+	<div class="quarter_note3">&#9833;
+		<div class="circle11"></div>
+	</div>
+	<div class="natural">&#9838;</div>
+	<div class="sharp">&#9839;</div>
+<div id="background"><img src="images/underwater.jpg" width="100%" height="100%" style="position: absolute; left: 0; top: 0; z-index: -4; display: none;"/></div>
+<div id="animal"><img src="images/animal.png" width="200"/>
+		<div id="prince"><img src="images/prince.png" width="80"/></div>
+		<div id="bubbles"><img src="images/bubbles.gif"/></div>
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+	
+	setTimeout(function(){
+		$('#reflection').hide(17000);
+	}, 2800);
+
+	setTimeout(function(){
+		$('#night_purple').fadeIn(4000);
+	}, 15000);
+
+	setTimeout(function(){
+		$('#night').fadeOut();
+	}, 19000);
+
+	setTimeout(function(){
+		$('#night_blue').fadeIn(4000);
+	}, 18000);
+
+	setTimeout(function(){
+		$('#night_purple').fadeOut();
+	}, 22000);
+	
+	setTimeout(function(){
+		$('#moon').hide();
+		$('#sun').show();
+		$('.stars').fadeOut(10000);
+		$('#night_blue').fadeOut(24000);
+		$('#day').fadeIn(24000);
+		$('#shore_night').fadeOut(22000);
+		$('#shore_day').fadeIn(20000);
+		$('#ocean_night').fadeOut(15000);
+		$('#ocean_dawn').fadeIn(4000);
+		$('#ocean_dawn').fadeOut(22000);
+		$('#ocean_day').fadeIn(10000);
+	}, 20000);
+	
+	setTimeout(function(){
+		$('#clouds').fadeIn(7000);
+		$('.birds').fadeIn(6000);
+	}, 30000);
+
+	setTimeout(function(){
+		$('.bubbles').fadeIn(1000);
+	}, 35200);
+
+	setTimeout(function(){
+		$('#splash').show();
+		$('.bubbles').hide();
+	}, 39600);
+
+	setTimeout(function(){
+		$('#dolphin, #boy').show();
+	}, 39600);
+
+	setTimeout(function(){
+		$('#splash').fadeOut();
+	}, 40500);
+
+	setTimeout(function(){
+		$('.Chapter1').fadeOut(1000);
+	}, 41200);
+
+	setTimeout(function(){
+		$('#background img').show();
+	}, 41300);
+
+	setTimeout(function(){
+		$('.waves, #animal, #prince').show(1000);
+	}, 42000);
+
+	setTimeout(function(){
+		$('#eighth_notes').show();
+	}, 42700);
+
+	setTimeout(function(){
+		$('.single_eighth').show();
+	}, 43000);
+
+	setTimeout(function(){
+		$('.quarter_note, .sharp').show();
+	}, 43100);
+
+	setTimeout(function(){
+		$('.single_eighth2, .flat').show();
+	}, 43500);
+
+	setTimeout(function(){
+		$('.rest').show();
+	}, 43800);
+
+	setTimeout(function(){
+		$('.single_eighth3, .natural').show();
+	}, 44000);
+
+	setTimeout(function(){
+		$('.single_eighth4').show();
+	}, 44300);
+
+	setTimeout(function(){
+		$('.rest2').show();
+	}, 44600);
+
+	setTimeout(function(){
+		$('.quarter_note2, .flat2, hr').show();
+	}, 44800);
+
+	setTimeout(function(){
+		$('.quarter_note3').show();
+	}, 45200);
+
+	setTimeout(function(){
+		$('audio').each(function(){
+    	this.pause();
+		}); 
+	}, 51000);
+
+	$('#rose').click(function(){
+		$(this).hide();
+		$('#sparkle').fadeIn().fadeOut(1000);
+	});
+
+	setTimeout(function(){
+		window.location = "replay/index.html";
+	}, 51000);
+});
+</script>
+
+<audio loop autoplay>
+	<source src="sounds/michirujo.mp3" type="audio/mp3">
+</audio>
+</body>
+</html>

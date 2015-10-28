@@ -1,0 +1,197 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+#wave img {
+	width: 100%;
+	height:60px;
+}
+
+#wave {
+	top: 200px;
+	width: 100%;
+	position: absolute;
+	animation: slide 7s linear infinite;
+	-webkit-animation: slide 7s linear infinite;
+}
+
+@keyframes slide {
+	from {right: 0;}
+	to {right: 100%;}
+}
+
+@-webkit-keyframes slide {
+	from {right: 0;}
+	to {right: 100%;}
+}
+
+#wave2 img {
+	width: 100%;
+	height:60px;
+}
+
+#wave2 {
+	width: 100%;
+	top: 200px;
+	position: absolute;
+	animation: slide2 7s linear infinite;
+	-webkit-animation: slide2 7s linear infinite;
+}
+
+@keyframes slide2 {
+	from {left: 100%;}
+	to {left: 0;}
+
+}
+
+@-webkit-keyframes slide2 {
+	from {left: 100%;}
+	to {left: 0;}
+
+}
+
+#background {
+	background: -moz-linear-gradient(top, #6699FF 42%, #31497A 100%);
+	background: -webkit-linear-gradient(top, #6699FF 42%, #31497A 100%);
+	background: linear-gradient(top, #6699FF 42%, #31497A 100%);
+	width: 100%;
+	height: 230px;
+	z-index: -2;
+	position: absolute;
+	top: 0;
+}
+
+#background2 {
+	background: -moz-linear-gradient(top, #002E8A 22%, #061022 100%);
+	background: -webkit-linear-gradient(top, #002E8A 22%, #061022 100%);
+	background: linear-gradient(top, #002E8A 22%, #061022 100%);
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	height: 100%;
+	top: 230px;
+}
+
+#sun {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	border-bottom-left-radius: 100%; 
+	box-shadow:0 0 50px orange,0 0 150px gold, inset 200px 20px 20px 40px #FFFF33, inset 30px 0 35px 50px ivory;
+}
+
+#clouds {
+	position: absolute;
+	width: 100%;
+	z-index: -2;
+	-webkit-animation: float 7s linear infinite;
+	animation: float 7s linear infinite;
+}
+
+@-webkit-keyframes float {
+	from {right: 0;}
+	to {right: 100%;}
+}
+
+@keyframes float {
+	from {right: 0;}
+	to {right: 100%;}
+}
+
+#clouds2 {
+	position: absolute;
+	width: 100%;
+	z-index: -2;
+	-webkit-animation: float2 7s linear infinite;
+	animation: float2 7s linear infinite;
+}
+
+@-webkit-keyframes float2 {
+	from {left: 100%;}
+	to {left: 0;}
+
+}
+
+@keyframes float2 {
+	from {left: 100%;}
+	to {left: 0;}
+
+}
+
+#dolphin {
+	position: relative;
+	left: 20%;
+	z-index: -2;
+	-webkit-animation: jump 2s linear infinite, air 2s linear infinite;
+	animation: jump 2s linear infinite, air 2s linear infinite;	
+}
+
+@-webkit-keyframes jump {
+    	from {transform: rotate(0deg) translateX(-100px) rotate(0deg);}
+    	to   {transform: rotate(200deg) translateX(-100px) rotate(-200deg);}
+}
+
+@keyframes jump {
+    	from {transform: rotate(0deg) translateX(-100px) rotate(0deg);}
+    	to   {transform: rotate(200deg) translateX(-100px) rotate(-200deg);}
+}
+
+@-webkit-keyframes air {
+	0% {margin-top: 240px;}
+	50% {margin-top: 140px;}
+	100% {margin-top: 240px;}
+}
+
+@keyframes air {
+	0% {margin-top: 240px;}
+	50% {margin-top: 140px;}
+	100% {margin-top: 240px;}
+}
+
+#dolphin img {
+	width: 200px;
+}
+
+#boy {
+	position: absolute;
+	margin-top: -157px;
+	left: 68px;
+}
+
+#boy img {
+	width: 80px;
+}
+
+#replay {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 100px;
+	height: 100px;
+	margin-left: -50px;
+	border-radius: 50%;
+	box-shadow: 20px 20px ivory;
+	font-size: 30px;
+	text-align: center;
+	color: rgba(125, 125, 125, .7);
+}
+
+#replay:hover {
+	color: gold;
+}
+
+#bird {
+	position: absolute;
+	top: 10px;
+	left: 45%;
+}
+
+#bird img {
+	width: 50px;
+}
